@@ -13,8 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Scroll to top on page load
     window.scrollTo({ top: 0, behavior: "smooth" });
 
-    // Hide form success message initially
-    document.getElementById("formSuccess").classList.add("hidden");
+    // Ensure form success message is hidden
+    const formSuccess = document.getElementById("formSuccess");
+    if (formSuccess) {
+      formSuccess.classList.add("hidden");
+      formSuccess.classList.remove("visible");
+    } else {
+      console.error("formSuccess-Element nicht gefunden!");
+    }
 
     console.log("Seite initialisiert");
   } catch (error) {
@@ -72,36 +78,42 @@ window.addEventListener("scroll", () => {
 // Contact Form Submission
 // -----------------------------------
 try {
-  document.getElementById("contactForm").addEventListener("submit", async (e) => {
-    e.preventDefault();
-    try {
-      const form = e.target;
-      const formSuccess = document.getElementById("formSuccess");
-      const response = await fetch("https://formsubmit.co/ajax/mar.hoepfler@icloud.com", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: form.name.value,
-          email: form.email.value,
-          message: form.message.value,
-        }),
-      });
+  const contactForm = document.getElementById("contactForm");
+  if (contactForm) {
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      try {
+        const formSuccess = document.getElementById("formSuccess");
+        const response = await fetch("https://formsubmit.co/ajax/mar.hoepfler@icloud.com", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: e.target.name.value,
+            email: e.target.email.value,
+            message: e.target.message.value,
+          }),
+        });
 
-      if (response.ok) {
-        formSuccess.classList.remove("hidden");
-        formSuccess.classList.add("visible");
-        form.reset();
-        setTimeout(() => {
-          formSuccess.classList.remove("visible");
-          formSuccess.classList.add("hidden");
-        }, 5000);
-      } else {
-        console.error("Formularübermittlung fehlgeschlagen:", response.status);
+        if (response.ok) {
+          formSuccess.classList.remove("hidden");
+          formSuccess.classList.add("visible");
+          e.target.reset();
+          setTimeout(() => {
+            formSuccess.classList.remove("visible");
+            formSuccess.classList.add("hidden");
+          }, 5000);
+        } else {
+          console.error("Formularübermittlung fehlgeschlagen:", response.status);
+          alert("Fehler beim Senden der Nachricht. Bitte versuche es erneut.");
+        }
+      } catch (error) {
+        console.error("Fehler beim Formularversand:", error);
+        alert("Ein Fehler ist aufgetreten. Bitte überprüfe deine Internetverbindung.");
       }
-    } catch (error) {
-      console.error("Fehler beim Formularversand:", error);
-    }
-  });
+    });
+  } else {
+    console.error("contactForm-Element nicht gefunden!");
+  }
 } catch (error) {
   console.error("Fehler im Formular-Handler:", error);
 }
