@@ -3,68 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Markus Höpfler – Bewerbungsprojekt für CSP Großköllnbach" />
-  <title>Markus Höpfler | CSP Showcase</title>
+  <meta name="description" content="Markus Junior Höpfler – Bewerbung für eine Umschulung zum Fachinformatiker für Anwendungsentwicklung bei CSP in Großköllnbach" />
+  <meta name="author" content="Markus Höpfler" />
+  <title>Markus Höpfler | Bewerbung CSP</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest" defer></script>
 </head>
 <body>
+  <!-- Progress Bar -->
+  <div class="progress-bar"></div>
+
+  <!-- Header -->
   <header class="hero">
-    <h1>Markus Höpfler</h1>
-    <p>Future Software Developer | Bewerbungsprojekt für CSP</p>
-    <a href="#about" class="btn">Mehr erfahren</a>
+    <h1>Markus Junior Höpfler</h1>
+    <p>Leidenschaftlicher Softwareentwickler in der Umschulung</p>
+    <a href="#why-csp" class="btn" aria-label="Warum ich zu CSP möchte">Meine Bewerbung</a>
   </header>
 
+  <!-- Navigation -->
   <nav class="nav">
-    <a href="#about">Über mich</a>
-    <a href="#skills">Skills</a>
-    <a href="#project">Projekt</a>
-    <a href="#why-csp">Warum CSP</a>
-    <a href="#contact">Kontakt</a>
+    <ul>
+      <li><a href="#about" aria-label="Über Markus Höpfler"><i data-lucide="user"></i> Über mich</a></li>
+      <li><a href="#skills" aria-label="Meine Fähigkeiten"><i data-lucide="code"></i> Skills</a></li>
+      <li><a href="#project" aria-label="Mein Projekt Univine"><i data-lucide="briefcase"></i> Projekt</a></li>
+      <li><a href="#why-csp" aria-label="Warum ich zu CSP möchte"><i data-lucide="target"></i> Warum CSP</a></li>
+      <li><a href="#contact" aria-label="Kontakt aufnehmen"><i data-lucide="mail"></i> Kontakt</a></li>
+    </ul>
   </nav>
 
-  <main>
-    <section id="about">
+  <!-- Main Content -->
+  <main class="content-wrapper">
+    <!-- About Section -->
+    <section id="about" class="section">
       <h2>Über mich</h2>
-      <p>Ich bin Markus Höpfler und starte meine Umschulung zum Fachinformatiker für Anwendungsentwicklung. 
-      Mit Leidenschaft für Technologie, sauberen Code und Design möchte ich meine Fähigkeiten bei CSP einsetzen und ausbauen.</p>
+      <p>Ich bin Markus Höpfler, 25 Jahre alt, und befinde mich in der Umschulung zum Fachinformatiker für Anwendungsentwicklung. Mit großem Ehrgeiz und einer tiefen Leidenschaft für Technologie möchte ich Software nicht nur nutzen, sondern verstehen und gestalten. Mein Ziel ist es, sauberen, effizienten Code zu schreiben und innovative Lösungen zu entwickeln.</p>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <h2>Meine Fähigkeiten</h2>
+      <p>Als Anfänger in der Programmierung habe ich bereits solide Grundkenntnisse erworben und arbeite täglich daran, diese zu vertiefen.</p>
       <div class="skills">
-        <div class="skill"><span>HTML</span><div class="bar" style="width: 90%"></div></div>
-        <div class="skill"><span>CSS</span><div class="bar" style="width: 80%"></div></div>
-        <div class="skill"><span>JavaScript</span><div class="bar" style="width: 60%"></div></div>
+        <div class="skill">
+          <span>HTML</span>
+          <div class="bar"><div class="progress" style="width: 90%"></div></div>
+        </div>
+        <div class="skill">
+          <span>CSS</span>
+          <div class="bar"><div class="progress" style="width: 80%"></div></div>
+        </div>
+        <div class="skill">
+          <span>JavaScript</span>
+          <div class="bar"><div class="progress" style="width: 60%"></div></div>
+        </div>
       </div>
     </section>
 
-    <section id="project">
+    <!-- Project Section -->
+    <section id="project" class="section">
       <h2>Mein Projekt – Univine</h2>
-      <p>Univine ist mein persönliches Webprojekt, in dem ich moderne Webentwicklungstechniken nutze. 
-      <a href="https://github.com/hoepfler-m/projekt-univine" target="_blank">Hier ansehen</a>.</p>
+      <p>Univine ist mein Herzensprojekt, eine moderne Webanwendung, die ich während meiner Umschulung entwickelt habe. Es zeigt meine Fähigkeit, HTML, CSS und JavaScript zu kombinieren, um ansprechende und funktionale Interfaces zu erstellen. <a href="https://github.com/hoepfler-m/projekt-univine" target="_blank" aria-label="Projekt Univine auf GitHub">Zum Projekt auf GitHub</a>.</p>
     </section>
 
-    <section id="why-csp">
+    <!-- Why CSP Section -->
+    <section id="why-csp" class="section">
       <h2>Warum CSP?</h2>
-      <p>Ich wohne direkt in Großköllnbach und bin überzeugt, dass CSP der perfekte Partner für meine berufliche Entwicklung ist. 
-      Mein Ziel: mich mit Engagement und praxisnahen Projekten einbringen und echten Mehrwert schaffen.</p>
+      <p>Als Bewohner von Großköllnbach fühle ich mich mit CSP besonders verbunden. Mein aktueller Umschulungsbetrieb bietet mir leider nicht die Möglichkeit, meinen Interessen im Bereich Softwareentwicklung – insbesondere dem Schreiben und Verstehen von Code – in der Tiefe nachzugehen. Ich möchte mehr als nur Tools und Plugins nutzen; ich möchte Software von Grund auf entwickeln. CSP beeindruckt mich durch seinen Ruf für innovative Projekte, und ich bin überzeugt, dass ich in Ihrem Team meine Fähigkeiten optimal entfalten kann. Mit Motivation, Lernbereitschaft und dem Wunsch, echten Mehrwert zu schaffen, bitte ich höflich um die Chance, meine Umschulung bei CSP fortzusetzen.</p>
     </section>
 
-    <section id="contact">
+    <!-- Contact Section -->
+    <section id="contact" class="section">
       <h2>Kontakt</h2>
-      <form id="contactForm">
-        <input type="text" name="name" placeholder="Dein Name" required>
-        <input type="email" name="email" placeholder="Deine E-Mail" required>
-        <textarea name="message" placeholder="Deine Nachricht"></textarea>
-        <button type="submit">Absenden</button>
+      <form id="contactForm" action="https://formsubmit.co/mar.hoepfler@icloud.com" method="POST">
+        <div class="form-group">
+          <label for="name">Dein Name *</label>
+          <input type="text" id="name" name="name" placeholder="Dein Name" required aria-required="true" />
+        </div>
+        <div class="form-group">
+          <label for="email">Deine E-Mail *</label>
+          <input type="email" id="email" name="email" placeholder="Deine E-Mail" required aria-required="true" />
+        </div>
+        <div class="form-group">
+          <label for="message">Deine Nachricht</label>
+          <textarea id="message" name="message" rows="5" placeholder="Deine Nachricht" aria-label="Nachricht"></textarea>
+        </div>
+        <button type="submit" class="btn">Nachricht senden</button>
+        <input type="hidden" name="_subject" value="Bewerbung Markus Höpfler für CSP">
+        <input type="hidden" name="_captcha" value="false">
       </form>
-      <p id="formSuccess" class="hidden">Danke für deine Nachricht!</p>
+      <p id="formSuccess" class="hidden"><i data-lucide="check-circle"></i> Danke für deine Nachricht!</p>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Markus Höpfler – Bewerbungsprojekt für CSP</p>
+    <p>© 2025 Markus Junior Höpfler | Bewerbung für CSP Großköllnbach</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/hoepfler-m" aria-label="LinkedIn Profil von Markus Höpfler"><i data-lucide="linkedin"></i></a>
+      <a href="https://github.com/hoepfler-m" aria-label="GitHub Profil von Markus Höpfler"><i data-lucide="github"></i></a>
+    </div>
   </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top hidden" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Zurück zum Seitenanfang">
+    <i data-lucide="arrow-up"></i>
+  </button>
 
   <script src="script.js"></script>
 </body>
